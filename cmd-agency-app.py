@@ -1,7 +1,7 @@
 import csv
 from abc import ABC,abstractmethod
+from tkinter.font import names
 
-# initializing the titles and rows list
 fields = []
 rows = []
 data=[]
@@ -67,10 +67,10 @@ print(sorted.sortData())
 
 
 # field names
-fields = ['id', 'price', 'countryCurrency', 'addressStreet','status Type','badgeInfo','hasOpenHouse','relaxed','addressCity','zestimate']
+fieldsnames = ['id', 'price', 'countryCurrency', 'addressStreet','status Type','badgeInfo','hasOpenHouse','relaxed','addressCity','zestimate']
 
 # data rows of csv file
-rows = [ ['265375257', '$330,000','$','1053 Lutheran','FOR_SALE','Null','NULL','FALSE','Atlanta','FALSE'],
+datarows = [ ['265375257', '$330,000','$','1053 Lutheran','FOR_SALE','Null','NULL','FALSE','Atlanta','FALSE'],
 		['9844636', '$630,100', '$','153 Black Bear','FOR_SALE','ForSale','TRUE','NULL','Blaine','FALSE'],
 		['7468349', '$110,000', '$','1792 12th Street','FOR_SALE','Null','NULL','FALSE','Biloxi','68500'],
 		['128749', '$830,500', '$','2513 Swan LN','FOR_SALE','Null','NULL','TRUE','Carson City','342400'],
@@ -98,7 +98,6 @@ rows = [ ['265375257', '$330,000','$','1053 Lutheran','FOR_SALE','Null','NULL','
 
 filename = "agency-real-estate.csv"
 
-# writing to csv file
 with open(filename, 'w') as csvfile:
 	csvwriter = csv.writer(csvfile)
 	csvwriter.writerow(fields)
