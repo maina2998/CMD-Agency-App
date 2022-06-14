@@ -1,4 +1,4 @@
-from abstract import CSVSort
+from Abstract import CSVSort
 
 class SearchCSV(CSVSort):
     def __init__(self,data, target, finder):
